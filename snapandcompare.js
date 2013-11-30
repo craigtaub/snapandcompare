@@ -7,11 +7,11 @@ var config = require('./config'), //config
 
 //local vars
 var breakpoints = config.bps,
-    screens = config.screens
+    screens = config.screens,
     masterUrl = config.masterUrl,
     diffUrl = config.diffUrl;
 
-//for each bp
+//foreach breakpoint
 breakpoints.forEach(function(item) { 
     //set bp width
     var options = {
@@ -20,24 +20,22 @@ breakpoints.forEach(function(item) {
       }
     };
 
-    //if exists
     fs.exists(screens+item+".jpg", function(exists) {
         if (exists) {
-            //exists
-
+            //master exists
             //create snapshot .diff
             webshot(masterUrl, screens+item+'.diff.jpg', options,  function(err) {
-                //screenshot now saved .diff...will overwrite
+                //screenshot now saved .diff...will overwrite if necessary
                 functions.runComparison(item, err, gm, screens);
             });
 
         } else {
-            //doesnt exist
-
+            //master doesnt exist
             //create snapshot master
             webshot(diffUrl, screens+item+'.jpg', options,  function(err) {
-               // screenshot now saved
-                functions.log("MASTER Stored", item);
+               //master screenshot now saved
+                console.log("MASTER Stored bp:", item);
+
             });
         }
 
