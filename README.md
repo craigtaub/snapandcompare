@@ -7,19 +7,23 @@ It can compare against a single environment or several and will produce visuals 
 
 ## Why is this tool here?
 
-### Why not phantomJS?
+### Why not PhantomJS?
 - Did not find any decent image comparison library for it (see PhantomCSS at bottom for more)
 - Its not a node module and we dont need overhead of headless browser, just snap on diff bps.
 - Thats why Node and webpage
 
-### Why not imagemagick?
-- The node api doesnt have compare
-- Thats why GraphicsMagick
-- GraphicsMagick is a fork of ImageMagick, emphasizing stability of both programming API and command-line options. The settings are a matter of trial and error
+### Why not ImageMagick?
+- The NodeJS API for it does not have compare()
 
-### Why Node?
+### Why GraphicsMagick?
+- GraphicsMagick is a fork of ImageMagick, emphasizing stability of both programming API and command-line options (so it does have compare). 
+- The settings are a matter of trial and error.
+
+### Why NodeJS?
 - Very easy to setup/install and use
 - Easy to add new modules and keep decoupled
+- Asynchronous so light weight and very fast
+- Can move onto processing next BP while waiting for GraphicsMagick
 
 ### Why not Nodes imagediff?
 - Need pkgconfig (and all of cairo etc)
@@ -28,7 +32,7 @@ It can compare against a single environment or several and will produce visuals 
 ### Why not other tools?
 - PhantomCSS - Image compares using ResembleJS which did colours well but very little else was caught on testing
 - CSS Critic - Does not work on command line
-- Wraith - Must work off 2 domains, cant take master and then diff from same place...takes long time too (3-5 seconds per image). Built with ruby.
+- Wraith - Must work off 2 domains, cant take master and then diff from same place...takes long time too (3-5 seconds per image). Built with Ruby so requires a the environment.
 
 ## Setup:
 
@@ -53,6 +57,6 @@ Second run:
 For all Breakpoints will find the master image, create a new .diff image and run a comparison on the two producing a .fail image and flagging up if the images differ.
 
 ## Usage:
-- update the config file to hold the masterUrl and diffUrl you need (they are often the same but not always)
+- Update the `config.js` file to hold the masterUrl and diffUrl you need (they are often the same but not always)
 
 node snapandcompare.js 
