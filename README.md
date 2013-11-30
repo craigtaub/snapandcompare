@@ -1,7 +1,7 @@
 # Snap And Compare
 
  * Website: 
- * Source: http://github.com/bbc-news/wraith
+ * Source: https://github.com/craigtaub/snapandcompare
 
 SnapAndCompare is a screenshot comparison tool used for CSS regression testing.
 It can compare against a single environment or several.
@@ -29,7 +29,7 @@ Logic
 
 ### Why not other tools?
 PhantomCSS - img compares lame (resemble)
-Css critic - doesnt work command line
+CSS Critic - doesnt work command line
 Wraith - must work off 2 domains, cant take master and then diff from same place...takes long time too (3-5 seconds per image), is ruby
 
 ## Setup:
