@@ -1,16 +1,16 @@
+//node modules
+var config = require('./config'), //config
+    webshot = require('webshot'), //Screen shots
+    gm = require('gm'), //GraphicMagick
+    fs = require('fs'); //filesystem
 
-var masterUrl = "https://www.google.co.uk";
-var diffUrl = "https://www.google.es";
-
-var webshot = require('webshot'); //Screens
-var gm = require('gm'); //GraphicMagick
-var fs = require('fs'); //filesystem
-
-//the bps
-items = [400, 600, 1000, 1300];
+//local vars
+var breakpoints = config.bps,
+    masterUrl = config.masterUrl,
+    diffUrl = config.diffUrl;
 
 //for each bp
-items.forEach(function(item) { 
+breakpoints.forEach(function(item) { 
 
     //if exists
     fs.exists("screenshots/g-"+item+".jpg", function(exists) {
@@ -69,3 +69,4 @@ items.forEach(function(item) {
     });
 
  });
+ 
