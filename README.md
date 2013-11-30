@@ -57,4 +57,4 @@ For all Breakpoints will find the master image, create a new .diff image and run
 
 ## Usage:
 
-#node snapandcompare.js <url>
+node snapandcompare.js <url>
