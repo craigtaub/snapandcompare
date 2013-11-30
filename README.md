@@ -12,23 +12,23 @@ It can compare against a single environment or several and will produce visuals 
 - Thats why GraphicsMagick
 - GraphicsMagick is a fork of ImageMagick, emphasizing stability of both programming API and command-line options. The settings are a matter of trial and error
 
-### Why not phantomJS
+### Why not phantomJS?
 - no good image comp tool
 - its not a node module and we dont need overhead of headless browser, just snap on diff bps.
 - Thats why Node and webpage
 
-### Why node?
+### Why Node?
 - very easy to setup/install and use
 - easy to add new modules and keep decoupled
 
-### Why not nodes imagediff?
+### Why not Nodes imagediff?
 - need pkgconfig stuff (cairo)
 - canvas html based so needs a browser with the image.
 
 ### Why not other tools?
-- PhantomCSS - img compares lame (resemble)
-- CSS Critic - doesnt work command line
-- Wraith - must work off 2 domains, cant take master and then diff from same place...takes long time too (3-5 seconds per image). Built with ruby.
+- PhantomCSS - image compares using ResembleJS which did colours well but very little else was caught on testing
+- CSS Critic - does not work on command line
+- Wraith - Must work off 2 domains, cant take master and then diff from same place...takes long time too (3-5 seconds per image). Built with ruby.
 
 ## Setup:
 
