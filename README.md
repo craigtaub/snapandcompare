@@ -45,7 +45,7 @@ http://nodejs.org/download/
 - sudo make install
 
 ### Download app dependencies
-npm install
+<b>npm install</b>
 
 ## How does the logic work:
 
@@ -56,6 +56,10 @@ Second run:
 For all Breakpoints will find the master image, create a new .diff image and run a comparison on the two producing a .fail image and flagging up if the images differ.
 
 ## Usage:
-- Update the `config.js` file to hold the masterUrl and diffUrl you need (they are often the same but not always)
+- Update the `config.js` file to hold the `masterUrl` and `diffUrl` you need (they are often the same but not always)
+- Run:
+<b>node snapandcompare.js</b>
 
-node snapandcompare.js 
+## Testing:
+- Swap the config files and run the program to test. (`./config')` for `('./config.test')`.
+
