@@ -5,7 +5,7 @@ It can compare against a single environment or several and will produce visuals 
 
 ## Why is this tool here?
 
-### Why about the other tools?
+### What about the other tools?
 - PhantomCSS - Image comparison using ResembleJS which did colours well but very little else was caught on testing
 - CSS Critic - Does not work on command line
 - Wraith - Must run off 2 different domains everytime, is built this way.Takes a while to run (3-5 seconds per image). Built with Ruby so requires the right environment.
