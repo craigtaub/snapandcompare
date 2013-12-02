@@ -7,8 +7,8 @@ var config = {
         "name": "",
         "value": ""
     }],
-    masterUrl : "",
-    diffUrl : ""
+    masterUrl : "https://www.google.co.uk",
+    diffUrl : "https://www.google.es"
 };
 
 module.exports = config;
