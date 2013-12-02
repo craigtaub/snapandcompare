@@ -37,6 +37,9 @@ It can compare against a single environment or several and will produce visuals 
 http://nodejs.org/download/
 
 ### Download and install GraphicMagick (gm)
+<b>brew install graphicsmagick</b>
+
+Or if that doesn't work install from source.
 - http://www.graphicsmagick.org/download.html 
 - ./configure
 - make
@@ -59,5 +62,5 @@ For all Breakpoints will find the master image, create a new .diff image and run
 <b>node snapandcompare.js</b>
 
 ## Testing:
-- Swap the config files and run the program to test. (`./config')` for `('./config.test')`.
+- Swap the config files and run the program to test. `('./config')` for `('./config.test')`.
 
