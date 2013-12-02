@@ -12,7 +12,7 @@ It can compare against a single environment or several and will produce visuals 
 
 ### Why not PhantomJS?
 - Did not find any decent image comparison library for it (see PhantomCSS at bottom for more).
-- Its not a node module and we dont need overhead of headless browser, just snap on diff bps.
+- Its not a node module whereas Webshot is a light weapper around PhantomJS.
 
 ### Why not ImageMagick?
 - The NodeJS API for it does not have compare().
