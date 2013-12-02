@@ -1,5 +1,5 @@
 //node modules
-var config = require('./config.iplayer'), //config
+var config = require('./config'), //config
     functions = require('./functions'), //functions
     webshot = require('webshot'), //Screen shots
     gm = require('gm'), //GraphicMagick
