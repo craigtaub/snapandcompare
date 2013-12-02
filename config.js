@@ -9,6 +9,6 @@ var config = {
     }],
     masterUrl : "",
     diffUrl : ""
-}
+};
 
 module.exports = config;
