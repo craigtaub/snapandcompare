@@ -1,14 +1,15 @@
 //node modules
-var config = require('./config.iplayer'),
+var config = require('./config'),
     functions = require('./functions'),
     webshot = require('webshot'),
+    colors = require('colors'),
     gm = require('gm'), //GraphicMagick
     fs = require('fs'); //filesystem
 
 if(config.watchFile) {
-    console.log('Watching ',config.watchFile);
+    console.log('Watching ' . green , config.watchFile . yellow );
     fs.watch(config.watchFile, function() {
-        console.log('Change detected, run app.');
+        console.log('Change detected, run app.' . green);
         //Bind to changes in watchFile
         runApplication();
     });
@@ -32,13 +33,13 @@ function runApplication() {
                 //master exists. Create snapshot .diff
                 webshot(config.diffUrl, config.screens+item+'.diff.jpg', options,  function(err) {
                     //screenshot now saved .diff...will overwrite if necessary.
-                    functions.runComparison(item, err, gm, config.screens);
+                    functions.runComparison(item, err);
                 });
             } else {
                 //master doesnt exist. Create snapshot master.
                 webshot(config.masterUrl, config.screens+item+'.jpg', options,  function(err) {
                    //master screenshot now stored.
-                    console.log("MASTER Stored bp:", item);
+                    console.log("MASTER Stored bp:" . green , item);
                 });
             }
         });

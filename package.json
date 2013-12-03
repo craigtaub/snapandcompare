@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "webshot": "~0.7",
-    "gm": "~1.13"
+    "gm": "~1.13",
+    "colors": "~0.6"
   },
   "repository": {
     "type": "git",
