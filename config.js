@@ -8,7 +8,8 @@ var config = {
         "value": ""
     }],
     masterUrl : "https://www.google.co.uk",
-    diffUrl : "https://www.google.es"
+    diffUrl : "https://www.google.es",
+    watchFile : ""
 };
 
 module.exports = config;

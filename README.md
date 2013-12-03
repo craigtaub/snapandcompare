@@ -56,14 +56,22 @@ Or if that doesn't work install from source.
 
 ## How does the logic work:
 
-First run:
+### Without a `watchFile`:
+
+First run (w/o `watchFile`):
 For all Breakpoints will check if a master image exists, if not will create one.
 
-Second run:
+Second run (w/o `watchFile`):
 For all Breakpoints will find the master image, create a new .diff image and run a comparison on the two producing a .fail image and flagging up if the images differ. 
 
-After that: 
+After that (w/o `watchFile`): 
 For each Breakpoint it will either compare against the diff or download a new Master image (depending on what already exists in `/screenshots`).
+
+### With a `watchFile`:
+It will continually run on save of the file. It will flag up the status of each Breakpoint as PASS or FAIL.
+
+First run:
+On save of `watchFile` it will create the Master files after that will run the comparison evertime it detects a change.
 
 ## Usage:
 - Update the `config.js` file to hold the `masterUrl` and `diffUrl` you need (they are often the same but not always)
@@ -76,5 +84,7 @@ For each Breakpoint it will either compare against the diff or download a new Ma
 ## Known Issues:
 - If there are many images on the page the snapshot might not have downloaded all the images in time, you might be required to run the tool twice in order to get a proper comparison.
 -- Be sure to get the best quality Master images you can.
-- Doesn't execute any Javascript (alert() in page and it is not shown).
+- Doesn't execute any Javascript (alert in page and it is not shown).
+- Accuracy of FAIL, is it always a failure? 
+-- If everything is a failure it will end up being ignored.
 

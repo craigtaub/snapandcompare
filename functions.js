@@ -20,6 +20,7 @@ var functions = {
           highlightColor: 'yellow',
           file: screens+item+'.fail.jpg'
         };
+        //will overwrite current .fail if necessary.
         gm.compare(screens+item+".jpg", screens+item+".diff.jpg", options, function (err) {
           if (err) throw err;
         });
