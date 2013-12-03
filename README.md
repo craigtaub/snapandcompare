@@ -58,13 +58,13 @@ Or if that doesn't work install from source.
 
 ### Without a `watchFile`:
 
-First run (w/o `watchFile`):
+First run :
 For all Breakpoints will check if a master image exists, if not will create one.
 
-Second run (w/o `watchFile`):
+Second run:
 For all Breakpoints will find the master image, create a new .diff image and run a comparison on the two producing a .fail image and flagging up if the images differ. 
 
-After that (w/o `watchFile`): 
+After that: 
 For each Breakpoint it will either compare against the diff or download a new Master image (depending on what already exists in `/screenshots`).
 
 ### With a `watchFile`:
