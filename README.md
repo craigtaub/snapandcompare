@@ -1,7 +1,9 @@
 # Snap And Compare
 
-SnapAndCompare is a screenshot comparison tool used for CSS Visual Regression Testing built using NodeJS.
-It can compare against a single environment or two and will produce visuals and equality stats on image comparisons.
+SnapAndCompare is a screenshot comparison tool used for CSS Visual Regression Testing built using NodeJS.<br/>
+It can compare against a single environment or dual and will produce visuals and equality stats on image comparisons.<br/>
+<br/>
+Run in standalone mode or if you give a `watchFile` will run everyime that is updated/saved (useful for SASS development).
 
 ## Examples:
 
