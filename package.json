@@ -1,9 +1,8 @@
 {
   "name": "snapandcompare",
-  "version": "1.0.0",
-  "main": "./snapandcompare.js",
+  "version": "1.0.1",
   "description": "Screenshot comparison tool used for CSS regression testing.",
-  "homepage": "",
+  "main": "./snapandcompare.js",
   "keywords": [
     "util",
     "server",
@@ -13,20 +12,15 @@
     "diff",
     "imagediff"
   ],
-  "author": {
-    "name": "Craig Taub",
-    "email": "craigtaub@gmail.com"
+  "author": "Craig Taub <craigtaub@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/craigtaub/snapandcompare.git"
   },
   "dependencies": {
     "webshot": "~0.7",
     "gm": "~1.13",
     "colors": "~0.6"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/craigtaub/snapandcompare.git"
-  },
-  "engines": {
-    "node": ">= 0.6.0"
-  }
 }
