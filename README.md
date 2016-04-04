@@ -30,8 +30,8 @@ Or if that doesn't work install from source (http://www.graphicsmagick.org/downl
 <b>npm install</b>
 
 ## Usage:
-- Update the `config.js` file to hold the `masterUrl` and `diffUrl` you need (they are often the same but not always)
-- Run (first builds initial snapshot, second builds diff and compares):
+Update the `config.js` file to hold the `masterUrl` and `diffUrl` you need (they are often the same but not always)
+Run (first builds initial snapshot, second builds diff and compares):
 
     node snapandcompare.js
     node snapandcompare.js
