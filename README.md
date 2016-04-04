@@ -26,7 +26,7 @@ Run in standalone mode or if you give a `watchFile` will run everyime that is up
 - The NodeJS API for it does not have compare().
 
 ### Why GraphicsMagick?
-- GraphicsMagick is a fork of ImageMagick, emphasizing stability of both programming API and command-line options (so it does have compare). 
+- GraphicsMagick is a fork of ImageMagick, emphasizing stability of both programming API and command-line options (so it does have compare).
 - The settings are a matter of trial and error.
 
 ### Why NodeJS?
@@ -48,13 +48,19 @@ http://nodejs.org/download/
 <b>brew install graphicsmagick</b>
 
 Or if that doesn't work install from source.
-- http://www.graphicsmagick.org/download.html 
+- http://www.graphicsmagick.org/download.html
 - ./configure
 - make
 - sudo make install
 
 ### Download app dependencies
 <b>npm install</b>
+
+## Usage:
+- Update the `config.js` file to hold the `masterUrl` and `diffUrl` you need (they are often the same but not always)
+- Run:
+<b>node snapandcompare.js</b>
+<b>node snapandcompare.js</b>
 
 ## How does the logic work:
 
@@ -64,9 +70,9 @@ First run :
 For all Breakpoints will check if a master image exists, if not will create one.
 
 Second run:
-For all Breakpoints will find the master image, create a new .diff image and run a comparison on the two producing a .fail image and flagging up if the images differ. 
+For all Breakpoints will find the master image, create a new .diff image and run a comparison on the two producing a .fail image and flagging up if the images differ.
 
-After that: 
+After that:
 For each Breakpoint it will either compare against the diff or download a new Master image (depending on what already exists in `/screenshots`).
 
 ### With a `watchFile`:
@@ -75,11 +81,6 @@ It will continually run on save of the file. It will flag up the status of each 
 First run:
 On save of `watchFile` it will create the Master files after that will run the comparison evertime it detects a change.
 
-## Usage:
-- Update the `config.js` file to hold the `masterUrl` and `diffUrl` you need (they are often the same but not always)
-- Run:
-<b>node snapandcompare.js</b>
-
 ## Testing:
 - Swap the config files and run the program to test. `('./config')` for `('./config.test')`.
 
@@ -87,6 +88,5 @@ On save of `watchFile` it will create the Master files after that will run the c
 - If there are many images on the page the snapshot might not have downloaded all the images in time, you might be required to run the tool twice in order to get a proper comparison.
 -- Be sure to get the best quality Master images you can.
 - Doesn't execute any Javascript (alert in page and it is not shown).
-- Accuracy of FAIL, is it always a failure? 
+- Accuracy of FAIL, is it always a failure?
 -- If everything is a failure it will end up being ignored.
-
