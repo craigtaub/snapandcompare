@@ -58,37 +58,5 @@ On save of `watchFile` it will create the Master files after that will run the c
 ## Testing:
 - Swap the config files and run the program to test. `('./config')` for `('./config.test')`.
 
-## About the tool:
-
-### What about the other tools?
-- PhantomCSS - Image comparison using ResembleJS which did colours well but very little else was caught on testing
-- CSS Critic - Does not work on command line
-- Wraith - Must run off 2 different domains everytime, is built this way.Takes a while to run (3-5 seconds per image). Built with Ruby so requires the right environment.
-
-### Why not use PhantomJS?
-- Did not find any decent image comparison library for it (see PhantomCSS at bottom for more).
-- Its not a node module whereas Webshot is a light wrapper around PhantomJS.
-
-### Why not ImageMagick?
-- The NodeJS API for it does not have compare().
-
-### Why GraphicsMagick?
-- GraphicsMagick is a fork of ImageMagick, emphasizing stability of both programming API and command-line options (so it does have compare).
-- The settings are a matter of trial and error.
-
-### Why NodeJS?
-- Very easy to setup/install and use.
-- Easy to add new modules and keep decoupled.
-- Asynchronous so light weight and very fast.
-- Can move onto processing next BP while waiting for GraphicsMagick.
-
-### Why not Nodes imagediff?
-- Need pkgconfig (and all of cairo etc).
-- Canvas html based so needs a browser holding the image, kind of pointless.
-
-## Known Issues:
-- If there are many images on the page the snapshot might not have downloaded all the images in time, you might be required to run the tool twice in order to get a proper comparison.
--- Be sure to get the best quality Master images you can.
-- Doesn't execute any Javascript (alert in page and it is not shown).
-- Accuracy of FAIL, is it always a failure?
--- If everything is a failure it will end up being ignored.
+## Research:
+- found here https://gist.github.com/craigtaub/8450909416482d594058ce88dbbeaf08 
